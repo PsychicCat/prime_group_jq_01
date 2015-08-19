@@ -43,7 +43,7 @@ setPrice(pear);
 				$(this).text("Current Price $" + price.toFixed(2))
 				var $button = $('<button>');
 				$button.text('Sell');
-				$button.attr('class', 'btn btn-warning btn-sm Sell' + name);
+				$button.attr('class', 'btn btn-warning btn-block Sell' + name);
 				$(this).append($button);
 			} 
 	});
@@ -86,7 +86,7 @@ setPrice(pear);
 				$(this).text("Current Price $" + price.toFixed(2))
 				var $button = $('<button>');
 				$button.text('Sell');
-				$button.attr('class', 'btn btn-warning btn-sm Sell' + name);
+				$button.attr('class', 'btn btn-warning btn-block Sell' + name);
 				$(this).append($button);
 
 			} 
@@ -106,56 +106,56 @@ function getAveragePrice(array, amount){
 
 $('.applePurchase').on('click', function(e){
 	if (user.money < apple.price){
-	$("div.remainingMoney").html("Remaining $" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
 	} else {
 		user.appleBought.push(apple.price);
 		user.money -= apple.price;
-		$( "div.remainingMoney" ).html( "Remaining $" + user.money );
+		$( "div.remainingMoney" ).html("$" + user.money );
 	}
 	$("span.appleQuantityPurchased").html(user.appleBought.length);
-	$('span.appleAveragePrice').html("Avg. Buy Price $" + getAveragePrice(user.appleBought,user.appleBought.length));
+	$('span.appleAveragePrice').html("Average Buy Price $" + getAveragePrice(user.appleBought,user.appleBought.length));
 	console.log(user.money,user.appleBought);
 	e.preventDefault;
 });
 
 $('.orangePurchase').on('click', function(e){
 	if (user.money < orange.price){
-	$("div.remainingMoney").html("Remaining $" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
 	} else {
 		user.orangeBought.push(orange.price);
 		user.money -= orange.price;
-		$( "div.remainingMoney" ).html( "Remaining $" + user.money );
+		$( "div.remainingMoney" ).html("$" + user.money );
 	}
 	$("span.orangeQuantityPurchased").html(user.orangeBought.length);
-	$('span.orangeAveragePrice').html("Avg. Buy Price $" + getAveragePrice(user.orangeBought,user.orangeBought.length));
+	$('span.orangeAveragePrice').html("Average Buy Price $" + getAveragePrice(user.orangeBought,user.orangeBought.length));
 	console.log(user.money,user.orangeBought);
 	e.preventDefault;
 });
 
 $('.bananaPurchase').on('click', function(e){
 	if (user.money < banana.price){
-	$("div.remainingMoney").html("Remaining $" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
 	} else {
 		user.bananaBought.push(banana.price);
 		user.money -= banana.price;
-		$( "div.remainingMoney" ).html( "Remaining $" + user.money );
+		$( "div.remainingMoney" ).html( "$" + user.money );
 	}
 	$("span.bananaQuantityPurchased").html(user.bananaBought.length);
-	$('span.bananaAveragePrice').html("Avg. Buy Price $" + getAveragePrice(user.bananaBought,user.bananaBought.length));
+	$('span.bananaAveragePrice').html("Average Buy Price $" + getAveragePrice(user.bananaBought,user.bananaBought.length));
 	console.log(user.money,user.bananaBought);
 	e.preventDefault;
 });
 
 $('.pearPurchase').on('click', function(e){
 	if (user.money < pear.price){
-	$("div.remainingMoney").html("Remaining $" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
 	} else {
 		user.pearBought.push(pear.price);
 		user.money -= pear.price;
-		$( "div.remainingMoney" ).html( "Remaining $" + user.money );
+		$( "div.remainingMoney" ).html( "$" + user.money );
 	}
 	$("span.pearQuantityPurchased").html(user.pearBought.length);
-	$('span.pearAveragePrice').html("Avg. Buy Price $" + getAveragePrice(user.pearBought,user.pearBought.length));
+	$('span.pearAveragePrice').html("Average Buy Price $" + getAveragePrice(user.pearBought,user.pearBought.length));
 	console.log(user.money,user.pearBought);
 	e.preventDefault;
 });
