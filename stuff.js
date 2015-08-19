@@ -106,11 +106,11 @@ function getAveragePrice(array, amount){
 
 $('.applePurchase').on('click', function(e){
 	if (user.money < apple.price){
-	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money.toFixed(2) + " You do not have enough for this purchase!")
 	} else {
 		user.appleBought.push(apple.price);
 		user.money -= apple.price;
-		$( "div.remainingMoney" ).html("$" + user.money );
+		$( "div.remainingMoney" ).html("$" + user.money.toFixed(2));
 	}
 	$("span.appleQuantityPurchased").html(user.appleBought.length);
 	$('span.appleAveragePrice').html("Average Buy Price $" + getAveragePrice(user.appleBought,user.appleBought.length));
@@ -120,11 +120,11 @@ $('.applePurchase').on('click', function(e){
 
 $('.orangePurchase').on('click', function(e){
 	if (user.money < orange.price){
-	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money.toFixed(2) + " You do not have enough for this purchase!")
 	} else {
 		user.orangeBought.push(orange.price);
 		user.money -= orange.price;
-		$( "div.remainingMoney" ).html("$" + user.money );
+		$( "div.remainingMoney" ).html("$" + user.money.toFixed(2));
 	}
 	$("span.orangeQuantityPurchased").html(user.orangeBought.length);
 	$('span.orangeAveragePrice').html("Average Buy Price $" + getAveragePrice(user.orangeBought,user.orangeBought.length));
@@ -134,11 +134,11 @@ $('.orangePurchase').on('click', function(e){
 
 $('.bananaPurchase').on('click', function(e){
 	if (user.money < banana.price){
-	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money.toFixed(2) + " You do not have enough for this purchase!")
 	} else {
 		user.bananaBought.push(banana.price);
 		user.money -= banana.price;
-		$( "div.remainingMoney" ).html( "$" + user.money );
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 	}
 	$("span.bananaQuantityPurchased").html(user.bananaBought.length);
 	$('span.bananaAveragePrice').html("Average Buy Price $" + getAveragePrice(user.bananaBought,user.bananaBought.length));
@@ -148,11 +148,11 @@ $('.bananaPurchase').on('click', function(e){
 
 $('.pearPurchase').on('click', function(e){
 	if (user.money < pear.price){
-	$("div.remainingMoney").html("$" + user.money + " You do not have enough for this purchase!")
+	$("div.remainingMoney").html("$" + user.money.toFixed(2) + " You do not have enough for this purchase!")
 	} else {
 		user.pearBought.push(pear.price);
 		user.money -= pear.price;
-		$( "div.remainingMoney" ).html( "$" + user.money );
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 	}
 	$("span.pearQuantityPurchased").html(user.pearBought.length);
 	$('span.pearAveragePrice').html("Average Buy Price $" + getAveragePrice(user.pearBought,user.pearBought.length));
@@ -163,11 +163,11 @@ $('.pearPurchase').on('click', function(e){
 //fruits selling buttons
 $('#Fruits').on('click', '.SellApple', function(e){
 	if (user.appleBought.length == 0){
-		$( "div.remainingMoney" ).html( "$" + user.money + " You have no apples to sell!");
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2) + " You have no apples to sell!");
 	} else {
 		user.appleBought.shift();
 		user.money += apple.price;
-		$( "div.remainingMoney" ).html( "$" + user.money);
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 		$("span.appleQuantityPurchased").html(user.appleBought.length);
 	}
 	e.preventDefault();
@@ -175,11 +175,11 @@ $('#Fruits').on('click', '.SellApple', function(e){
 
 $('#Fruits').on('click', '.SellOrange', function(e){
 	if (user.orangeBought.length == 0){
-		$( "div.remainingMoney" ).html( "$" + user.money + " You have no oranges to sell!");
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2) + " You have no oranges to sell!");
 	} else {
 		user.orangeBought.shift();
 		user.money += orange.price;
-		$( "div.remainingMoney" ).html( "$" + user.money);
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 		$("span.orangeQuantityPurchased").html(user.orangeBought.length);
 	}
 	e.preventDefault();
@@ -187,11 +187,11 @@ $('#Fruits').on('click', '.SellOrange', function(e){
 
 $('#Fruits').on('click', '.SellBanana', function(e){
 	if (user.bananaBought.length == 0){
-		$( "div.remainingMoney" ).html( "$" + user.money + " You have no bananas to sell!");
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2) + " You have no bananas to sell!");
 	} else {
 		user.bananaBought.shift();
 		user.money += banana.price;
-		$( "div.remainingMoney" ).html( "$" + user.money);
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 		$("span.bananaQuantityPurchased").html(user.bananaBought.length);
 	}
 	e.preventDefault();
@@ -199,11 +199,11 @@ $('#Fruits').on('click', '.SellBanana', function(e){
 
 $('#Fruits').on('click', '.SellPear', function(e){
 	if (user.pearBought.length == 0){
-		$( "div.remainingMoney" ).html( "$" + user.money + " You have no pears to sell!");
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2) + " You have no pears to sell!");
 	} else {
 		user.pearBought.shift();
 		user.money += pear.price;
-		$( "div.remainingMoney" ).html( "$" + user.money);
+		$( "div.remainingMoney" ).html( "$" + user.money.toFixed(2));
 		$("span.pearQuantityPurchased").html(user.pearBought.length);
 	}
 	e.preventDefault();
