@@ -5,24 +5,128 @@
 		<title></title>
 
 		<meta name="description" content="Webpage">
+		<link href="bootstrap.min.css" rel="stylesheet">
+		<link href="2-col-portfolio.css" rel="stylesheet">
 		<link href="stylesheet.css" rel="stylesheet">
 
 		<script src="jquery.min.js"></script>
-		<script src="script.js"></script>
+		<script src="stuff.js"></script>
 	</head>
 	
-	<body>
-		<div id="apples">
-			<button id="buyApple">Buy Apple</button>
-			<div>
-		<div id="oranges">
-			<button id="buyOrange">Buy Orange</button>
-		</div>
-		<div id="bananas">
-			<button id="buyBanana">Buy Banana</button>
-		</div>
-		<div id="pears">
-			<button id="buyPear">Buy Pear</button>
-		</div>
+<body>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="page-header">Fruit Market</h1>
+            </div>
+        </div> <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-3 portfolio-item apple">
+                    <img class="img-responsive applePurchase" src="https://www.birchbox.com/images/uploads/October_Apples_700x400.jpg" alt="apple">
+              
+                <h3>
+                    <!-- <button id="buyApple">Buy Apple</button> -->
+                    <p id = "Apple" class="apple"></p>
+                    <span class ="appleAveragePrice"></span>
+                   
+                </h3>
+                <p>Click photo to purchase</p>
+            </div>
+            <div class="col-md-3 portfolio-item orange">
+                    <img class="img-responsive orangePurchase" src="http://doctormurray.com/wp-content/uploads/2013/04/oranges.jpg" alt="oranges">
+
+           
+                <h3>
+                     <!-- <button id="buyOrange">Buy Orange</button> -->
+                     <p id = "Orange" class="orange"></p>
+                     <span class = "orangeAveragePrice"></span>
+                    
+                </h3>
+                <p>Click photo to purchase</p>
+            </div>
+
+
+        <!-- Projects Row -->
+     
+            <div class="col-md-3 portfolio-item" "banana">
+                    <img class="img-responsive bananaPurchase" src="http://landsinlove.com/wp-content/uploads/bananas-700x400.jpg" alt="bananas">
+         
+                <h3>
+                    <!-- <button id="buyBanana">Buy Banana</button> -->
+                    <p id = "Banana" class="banana"></p>
+                    <span class = "bananaAveragePrice"></span>
+                    
+                </h3>
+                <p>Click photo to purchase</p>
+            </div>
+            <div class="col-md-3 portfolio-item" "pear">
+                    <img class="img-responsive pearPurchase" src="http://ste.india.com/sites/default/files/2015/08/04/387377-thinkstockphotos-534742801.jpg" alt="pears">
+       
+                <h3>
+                    <!-- <button id="buyPear">Buy Pear</button> -->
+                    <p id = "Pear" class="pear"></p>
+                    <span class = "pearAveragePrice"></span>
+                    
+                </h3>
+                <p>Click photo to purchase</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        
+        
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                	<h2>Balance</h2>
+                    <div class="remainingMoney well">$100</div>
+
+                	<h2>Purchase History</h2>
+                </div>
+            </div>
+                <div class="row">
+                	<div class="col-sm-2 apple">
+                		<img class="img-responsive" src="images/apple.png">
+                    </div>
+                    <div class="col-sm-1 apple">    
+                		<span class="appleQuantityPurchased badge">0</span>
+                	</div>
+					<div class="col-sm-2 orange">
+                		 <img class="img-responsive" src="images/orange.png">
+                	</div>
+                    <div class="col-sm-1 orange">	
+                        <span class= "orangeQuantityPurchased badge">0</span>
+                	</div>
+                	<div class="col-sm-2 banana">
+                		<img class="img-responsive" src="images/bananas.png">
+                    </div>  
+                    <div class="col-sm-1 banana">  
+                		<span class= "bananaQuantityPurchased badge">0</span>
+                	</div>
+                	<div class="col-sm-2 pear">
+                		<img class="img-responsive" src="images/pear.png">
+                    </div>
+                    <div class="col-sm-1 pear">    
+                		<span class= "pearQuantityPurchased badge">0</span>
+                	</div>	
+                </div>
+                	
+               
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+
 	</body>
 </html>
