@@ -52,10 +52,13 @@ setPrice(pear);
 }
 
 //update prices of fruit every 15 seconds
-	setInterval(function() {apple.price = updatePrice(apple); ;}, 1000);
+	setInterval(function() {apple.price = updatePrice(apple); ;}, 15000);
 	setInterval(function() {orange.price = updatePrice(orange);}, 15000);
 	setInterval(function() {banana.price = updatePrice(banana); }, 15000);
 	setInterval(function() {pear.price = updatePrice(pear); }, 15000);
+
+//
+	setInterval(function() {}, 300000);
 	
 
 //price update function
@@ -165,6 +168,7 @@ $('#Fruits').on('click', '.SellApple', function(e){
 		user.appleBought.shift();
 		user.money += apple.price;
 		$( "div.remainingMoney" ).html( "$" + user.money);
+		$("span.appleQuantityPurchased").html(user.appleBought.length);
 	}
 	e.preventDefault();
 });
@@ -176,6 +180,7 @@ $('#Fruits').on('click', '.SellOrange', function(e){
 		user.orangeBought.shift();
 		user.money += orange.price;
 		$( "div.remainingMoney" ).html( "$" + user.money);
+		$("span.orangeQuantityPurchased").html(user.orangeBought.length);
 	}
 	e.preventDefault();
 });
@@ -187,6 +192,7 @@ $('#Fruits').on('click', '.SellBanana', function(e){
 		user.bananaBought.shift();
 		user.money += banana.price;
 		$( "div.remainingMoney" ).html( "$" + user.money);
+		$("span.bananaQuantityPurchased").html(user.bananaBought.length);
 	}
 	e.preventDefault();
 });
@@ -198,6 +204,7 @@ $('#Fruits').on('click', '.SellPear', function(e){
 		user.pearBought.shift();
 		user.money += pear.price;
 		$( "div.remainingMoney" ).html( "$" + user.money);
+		$("span.pearQuantityPurchased").html(user.pearBought.length);
 	}
 	e.preventDefault();
 });
